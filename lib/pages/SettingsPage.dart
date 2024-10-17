@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_chat/pages/HomePage.dart';
-
-import 'ProfilePage.dart';
 
 class SettingsPage extends StatefulWidget {
 
@@ -13,29 +10,11 @@ class _SettingsPageState extends State<SettingsPage> {
 
    int _selectedIndex = 2;
 
-  void _onItemTapped(int index) {
-    // Переход на новую страницу в зависимости от выбранного индекса
-    switch (index) {
-    case 0:
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => ProfilePage()),
-      );
-      break;
-      case 1:
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => HomePage()),
-        );
-        break;
-    case 2:
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => SettingsPage()),
-      );
-      break;
-    }
-  }
+   void _onItemTapped(int index) {
+     setState(() {
+       _selectedIndex = index; // Обновляем индекс выбранной страницы
+     });
+   }
 
   @override
   Widget build(BuildContext context) {
@@ -49,6 +28,10 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
           centerTitle: true,
           title: const Text("MyChat"),
+        ),
+        body: IndexedStack(
+          index: _selectedIndex, // Указываем текущий индекс
+          children: pages, // Список страниц
         ),
       backgroundColor: Colors.amber,
         bottomNavigationBar: BottomNavigationBar(
