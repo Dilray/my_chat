@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'MainPage.dart';
+import 'MyApp.dart';
 
 // Точка входа в приложение
-void main() => runApp(const MainPage());
+void main() => runApp(MyApp());
