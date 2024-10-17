@@ -57,17 +57,17 @@ class _HomePageState extends State<HomePage> {
         BottomNavigationBarItem(
           icon: Icon(Icons.person),
           label: 'Профиль',
-          activeIcon: Icon(Icons.person),
+          activeIcon: Icon(Icons.person, color: Colors.grey,),
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: Icon(Icons.home, color: Colors.black87),
           label: 'Чаты',
-          activeIcon: Icon(Icons.home_filled),
+          activeIcon: Icon(Icons.home, color: Colors.black87),
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.settings),
           label: 'Настройки',
-          activeIcon: Icon(Icons.settings),
+          activeIcon: Icon(Icons.settings, color: Colors.grey),
         ),
       ],
       onTap: _onItemTapped,
