@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:my_chat/pages/HomePage.dart';
 
-import 'ProfilePage.dart';
+import 'SettingsPage.dart';
 
-class SettingsPage extends StatefulWidget {
+class ProfilePage extends StatefulWidget {
 
   @override
-  _SettingsPageState createState() => _SettingsPageState();
+  _ProfilePageState createState() => _ProfilePageState();
 }
 
-class _SettingsPageState extends State<SettingsPage> {
+class _ProfilePageState extends State<ProfilePage> {
 
-   int _selectedIndex = 2;
+   int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
     // Переход на новую страницу в зависимости от выбранного индекса
@@ -28,12 +28,12 @@ class _SettingsPageState extends State<SettingsPage> {
           MaterialPageRoute(builder: (context) => HomePage()),
         );
         break;
-    case 2:
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => SettingsPage()),
-      );
-      break;
+      case 2:
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => SettingsPage()),
+        );
+        break;
     }
   }
 
@@ -50,7 +50,7 @@ class _SettingsPageState extends State<SettingsPage> {
           centerTitle: true,
           title: const Text("MyChat"),
         ),
-      backgroundColor: Colors.amber,
+        backgroundColor: Colors.red,
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.white,
           items: const <BottomNavigationBarItem>[

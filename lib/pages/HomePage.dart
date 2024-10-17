@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_chat/pages/SettingsPage.dart';
 
+import 'ProfilePage.dart';
+
 class HomePage extends StatefulWidget {
 
   @override
@@ -9,29 +11,29 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  int _selectedIndex = 0;
+   int _selectedIndex = 1;
 
   void _onItemTapped(int index) {
     // Переход на новую страницу в зависимости от выбранного индекса
     switch (index) {
-      case 0:
+    case 0:
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => ProfilePage()),
+      );
+      break;
+      case 1:
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => HomePage()),
         );
         break;
-      case 1:
+      case 2:
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => SettingsPage()),
         );
         break;
-      // case 2:
-      //   Navigator.push(
-      //     context,
-      //     MaterialPageRoute(builder: (context) => ThirdPage()),
-      //   );
-      //   break;
     }
   }
 
