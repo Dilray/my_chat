@@ -21,14 +21,19 @@ class HomeScreen extends StatelessWidget {
             backgroundColor: Colors.white,
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
+                icon: Icon(Icons.person),
+                label: 'Профиль',
+                activeIcon: Icon(Icons.person),
+              ),
+              BottomNavigationBarItem(
                 icon: Icon(Icons.home),
-                label: 'Главная',
+                label: 'Чаты',
                 activeIcon: Icon(Icons.home_filled),
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                label: 'Профиль',
-                activeIcon: Icon(Icons.person_outline),
+                icon: Icon(Icons.settings),
+                label: 'Настройки',
+                activeIcon: Icon(Icons.settings),
               ),
             ]
         )
