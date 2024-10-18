@@ -8,49 +8,33 @@ class SettingsPage extends StatefulWidget {
 
 class _SettingsPageState extends State<SettingsPage> {
 
-   int _selectedIndex = 2;
-
-   void _onItemTapped(int index) {
-     setState(() {
-       _selectedIndex = index; // Обновляем индекс выбранной страницы
-     });
-   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          titleTextStyle: const TextStyle(
-            color: Colors.black87,
-            fontSize: 23.0,
-            letterSpacing: 2.0,
-          ),
-          centerTitle: true,
-          title: const Text("MyChat"),
-        ),
       backgroundColor: Colors.amber,
-        // bottomNavigationBar: BottomNavigationBar(
-        //   backgroundColor: Colors.white,
-        //   items: const <BottomNavigationBarItem>[
-        //     BottomNavigationBarItem(
-        //       icon: Icon(Icons.person),
-        //       label: 'Профиль',
-        //       activeIcon: Icon(Icons.person, color: Colors.grey),
-        //     ),
-        //     BottomNavigationBarItem(
-        //       icon: Icon(Icons.home),
-        //       label: 'Чаты',
-        //       activeIcon: Icon(Icons.home, color: Colors.grey),
-        //     ),
-        //     BottomNavigationBarItem(
-        //       icon: Icon(Icons.settings, color: Colors.black87),
-        //       label: 'Настройки',
-        //       activeIcon: Icon(Icons.settings, color: Colors.black87),
-        //     ),
-        //   ],
-        //   onTap: _onItemTapped,
-        // )
+      body: Align(
+        alignment: Alignment(0, -0.7), // Положение кнопки чуть выше центра (0, 0) — центр, -0.2 — чуть выше
+        child: SizedBox(
+          width: 250, // Длина кнопки
+          height: 50, // Ширина кнопки
+          child: ElevatedButton(
+            onPressed: () {
+              print("Кнопка нажата");
+            },
+            child: const Text("Уведомления и звуки"),
+          ),
+        ),
+      ),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        titleTextStyle: const TextStyle(
+          color: Colors.black87,
+          fontSize: 23.0,
+          letterSpacing: 2.0,
+        ),
+        centerTitle: true,
+        title: const Text("MyChat"),
+      ),
     );
   }
 }

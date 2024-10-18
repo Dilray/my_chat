@@ -22,7 +22,7 @@ class WelcomePage extends StatefulWidget {
 }
 
 class _WelcomePage extends State<WelcomePage> {
-  int _selectedIndex = 1;
+  int _selectedIndex = 2;
 
   final List<Widget> _pages = [
     HomePage(),
@@ -47,9 +47,9 @@ class _WelcomePage extends State<WelcomePage> {
           backgroundColor: Colors.white,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.person, color: Colors.grey),
+              icon: Icon(Icons.person_2, color: Colors.grey),
               label: 'Профиль',
-              activeIcon: Icon(Icons.person, color: Colors.black87),
+              activeIcon: Icon(Icons.person_2, color: Colors.black87),
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.home, color: Colors.grey),
