@@ -29,32 +29,28 @@ class _SettingsPageState extends State<SettingsPage> {
           centerTitle: true,
           title: const Text("MyChat"),
         ),
-        body: IndexedStack(
-          index: _selectedIndex, // Указываем текущий индекс
-          children: pages, // Список страниц
-        ),
       backgroundColor: Colors.amber,
-        bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.white,
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: 'Профиль',
-              activeIcon: Icon(Icons.person, color: Colors.grey),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Чаты',
-              activeIcon: Icon(Icons.home, color: Colors.grey),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings, color: Colors.black87),
-              label: 'Настройки',
-              activeIcon: Icon(Icons.settings, color: Colors.black87),
-            ),
-          ],
-          onTap: _onItemTapped,
-        )
+        // bottomNavigationBar: BottomNavigationBar(
+        //   backgroundColor: Colors.white,
+        //   items: const <BottomNavigationBarItem>[
+        //     BottomNavigationBarItem(
+        //       icon: Icon(Icons.person),
+        //       label: 'Профиль',
+        //       activeIcon: Icon(Icons.person, color: Colors.grey),
+        //     ),
+        //     BottomNavigationBarItem(
+        //       icon: Icon(Icons.home),
+        //       label: 'Чаты',
+        //       activeIcon: Icon(Icons.home, color: Colors.grey),
+        //     ),
+        //     BottomNavigationBarItem(
+        //       icon: Icon(Icons.settings, color: Colors.black87),
+        //       label: 'Настройки',
+        //       activeIcon: Icon(Icons.settings, color: Colors.black87),
+        //     ),
+        //   ],
+        //   onTap: _onItemTapped,
+        // )
     );
   }
 }
