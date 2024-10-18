@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatefulWidget {
+  const SettingsPage({super.key});
 
   @override
   _SettingsPageState createState() => _SettingsPageState();
@@ -13,7 +14,7 @@ class _SettingsPageState extends State<SettingsPage> {
     return Scaffold(
       backgroundColor: Colors.amber,
       body: Align(
-        alignment: Alignment(0, -0.7), // Положение кнопки чуть выше центра (0, 0) — центр, -0.2 — чуть выше
+        alignment: const Alignment(0, -0.7), // Положение кнопки чуть выше центра (0, 0) — центр, -0.2 — чуть выше
         child: SizedBox(
           width: 250, // Длина кнопки
           height: 50, // Ширина кнопки

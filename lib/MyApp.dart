@@ -47,21 +47,26 @@ class _WelcomePage extends State<WelcomePage> {
           backgroundColor: Colors.white,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.person_2, color: Colors.grey),
+              icon: Icon(Icons.person_2),
               label: 'Профиль',
-              activeIcon: Icon(Icons.person_2, color: Colors.black87),
+              activeIcon: Icon(Icons.person_2),
+
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.home, color: Colors.grey),
+              icon: Icon(Icons.home),
               label: 'Чаты',
-              activeIcon: Icon(Icons.home, color: Colors.black87),
+              activeIcon: Icon(Icons.home),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.settings, color: Colors.grey),
+              icon: Icon(Icons.settings),
               label: 'Настройки',
-              activeIcon: Icon(Icons.settings, color: Colors.black87),
+              activeIcon: Icon(Icons.settings),
             ),
+
           ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.black87,
+          unselectedItemColor: Colors.grey,
           onTap: _onItemTapped,
         )
     );
