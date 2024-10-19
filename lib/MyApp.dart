@@ -25,9 +25,9 @@ class _WelcomePage extends State<WelcomePage> {
   int _selectedIndex = 2;
 
   final List<Widget> _pages = [
-    HomePage(),
-    ProfilePage(),
-    SettingsPage(),
+    const HomePage(),
+    const ProfilePage(),
+    const SettingsPage(),
   ];
 
   void _onItemTapped(int index) {
